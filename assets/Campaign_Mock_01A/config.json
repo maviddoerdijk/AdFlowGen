@@ -1,0 +1,77 @@
+{
+    "assets": [
+        {
+            "asset_type": "background_video",
+            "filename": "3875283-hd_1920_1080_25fps.mp4"
+        },
+        {
+            "asset_type": "background_video",
+            "filename": "7517607-uhd_4096_2160_25fps.mp4"
+        },
+        {
+            "asset_type": "background_video",
+            "filename": "istockphoto-488280929-640_adpp_is.mp4"
+        },
+        {
+            "asset_type": "background_video",
+            "filename": "istockphoto-1463831576-640_adpp_is.mp4"
+        },
+        {
+            "asset_type": "background_video",
+            "filename": "istockphoto-1729461821-640_adpp_is.mp4"
+        },
+        {
+            "asset_type": "gif_animation",
+            "filename": "Animation - 1732381821358.gif"
+        },
+        {
+            "asset_type": "voice",
+            "filename": "KVNLBaby Always-onA25-54Trueview20-Tetris-Redesign.mp3"
+        },
+        {
+            "asset_type": "subtitle",
+            "subtitles": [
+                {
+                    "text": "We hebben de meest verkochte luier van Nederland..",
+                    "start": 1.0,
+                    "duration": 2.0
+                },
+                {
+                    "text": "Nog beter gemaakt!",
+                    "start": 3.0,
+                    "duration": 2.0
+                },
+                {
+                    "text": "Zo heeft de luier een nog betere pasvorm...",
+                    "start": 5.0,
+                    "duration": 2.0
+                },
+                {
+                    "text": "En blijft je baby beter droog.",
+                    "start": 7.0,
+                    "duration": 2.0
+                },
+                {
+                    "text": "Dan zit je baby nog lekkerder in z'n luier",
+                    "start": 9.0,
+                    "duration": 3.0
+                },
+                {
+                    "text": "en dus in z'n velletje!",
+                    "start": 12.0,
+                    "duration": 1.0
+                },
+                {
+                    "text": "Droge blije baby, zachte luier..",
+                    "start": 13.0,
+                    "duration": 3.0
+                },
+                {
+                    "text": "voor een zacht prijsje natuurlijk.",
+                    "start": 16.0,
+                    "duration": 2.0
+                }
+            ]
+        }
+    ]
+}
