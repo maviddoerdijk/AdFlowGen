@@ -1,0 +1,4 @@
+moviepy==2.0.0
+gTTS
+pytube==8.7.0
+elevenlabs==1.13.2

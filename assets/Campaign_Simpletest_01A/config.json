@@ -1,0 +1,39 @@
+{
+    "assets": [
+        {
+            "asset_type": "background_video",
+            "generation_method": "stock_video",
+            "filename": "lowres_bg_video.mp4",
+            "search_term": "background video lowres"
+        },
+        {
+            "asset_type": "background_photo",
+            "filename": "lowres_bg_image.jpg",
+            "generation_method": "stock_photo",
+            "search_term": "background image lowres"
+        },
+        {
+            "asset_type": "website_picture",
+            "filename": "lowres_website_image.jpg",
+            "generation_method": "website_picture",
+            "website_url": "https://google.com/"
+        },
+        {
+            "asset_type": "gif_animation",
+            "generation_method": "from_stlib",
+            "filename": "yellow_blobs.gif"
+        },
+        {
+            "generation_method": "generate_voiceover",
+            "voiceover_text": "Escape to serenity. At Alpine Haven Spa, inspired by the Swiss Alps, indulge in pure relaxation with world-class treatments and breathtaking tranquility. Your blissful retreat awaits."
+        },
+        {
+            "asset_type": "audio",
+            "filename": "voiceover.mp3"
+        },
+        {
+            "asset_type": "subtitle",
+            "filename": "voiceover.srt"
+        }
+    ]
+}
