@@ -12,6 +12,8 @@ import requests
 from pathlib import Path
 import logging
 import os
+import shutil
+import random
 
 def download_website_screenshot(website_url: str, output_folder: str = ".", filename: str = "screenshot.png", viewport: str = "1024x768") -> None:
     """
@@ -62,3 +64,21 @@ def download_website_screenshot(website_url: str, output_folder: str = ".", file
     except Exception as e:
         logging.error(f"An error occurred while downloading the screenshot: {e}")
         raise
+
+
+def gather_random_image_from_stlib(input_folder, filename, output_folder):
+    """
+    In input_folder / stock_image_collection, there are a number of images. Pick a random image and copy it to output_folder with the specified filename.
+    """    
+    stlib_folder = input_folder / 'stock_image_collection'
+    stlib_images = list(stlib_folder.glob('*.jpg'))
+    if not stlib_images:
+        logging.warning("No images found in the stlib folder.")
+        return
+
+    random_image = random.choice(stlib_images)
+    output_path = Path(output_folder) / filename
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy(random_image, output_path)
+    logging.info(f"Random image copied to {output_path}")
+    return output_path

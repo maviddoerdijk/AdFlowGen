@@ -5,9 +5,9 @@ from typing import Dict, Any
 import logging
 import shutil
 
-from .stock_media import download_stock_video, download_stock_image, download_gif
+from .stock_media import download_stock_video, download_stock_image_pexels, download_stock_image_unsplash, download_gif
 from .voiceover import generate_voiceover
-from .other import download_website_screenshot
+from .other import download_website_screenshot, gather_random_image_from_stlib
 
 
 def load_config(asset_folder: str) -> Dict[str, Any]:
@@ -51,7 +51,10 @@ def generate_assets(asset_folder: str):
             logging.info(f"Downloading stock image '{filename}'...")
             orientation = asset.get('orientation', 'landscape')
             search_term = asset.get('search_term', '')
-            download_stock_image(filename=filename, output_folder=asset_path, search_term=search_term, orientation=orientation)
+            success = download_stock_image_pexels(filename=filename, output_folder=asset_path, search_term=search_term, orientation=orientation)
+            if not success:
+                logging.warning(f"Failed to download stock image '{filename}'. Using default image.")
+                gather_random_image_from_stlib(input_folder=Path('assets/stlib'), filename=filename, output_folder=asset_path)
         elif generation_method == 'website_picture':
             website_url = asset.get('website_url')
             logging.info(f'Generating website image: {website_url}')
@@ -87,6 +90,20 @@ def generate_assets(asset_folder: str):
             # Add generated audio and subtitle files to additional entries
             additional_entries.append({"asset_type": "audio", "filename": audio_file})
             additional_entries.append({"asset_type": "subtitle", "filename": subtitle_file})
+            
+        elif generation_method == 'direct_image_url':
+            # Download an image from a direct URL
+            image_url = asset.get('src')
+            logging.info(f"Downloading image from URL: {image_url}")
+            try:
+                import requests
+                response = requests.get(image_url, stream=True)
+                response.raise_for_status()  # Raise an error for bad responses
+                with open(output_file, 'wb') as f:
+                    shutil.copyfileobj(response.raw, f)
+                logging.info(f"Downloaded image saved as: {output_file}")
+            except Exception as e:
+                logging.error(f"Failed to download image from URL '{image_url}': {e}")
         elif generation_method == 'subtitle_from_existing_audio':
             raise NotImplementedError("Subtitle generation from existing audio is not yet implemented.")
         else:

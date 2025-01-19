@@ -1,8 +1,6 @@
 ### Custom Ignores for this codebase ###
-assets/Campaign_*/!*.json
 assets/Campaign_*/**
-!assets/Campaign_*/**/*.json
-
+assets/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

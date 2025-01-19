@@ -46,7 +46,7 @@ def download_youtube_video_from_url(url: str, output_folder: str, filename: str)
     except Exception:
         return False, traceback.format_exc()
 
-def download_stock_image(filename: str, output_folder: str = ".", search_term: str = "", orientation: str = "landscape") -> None:
+def download_stock_image_unsplash(filename: str, output_folder: str = ".", search_term: str = "", orientation: str = "landscape") -> None:
     """
     Downloads the first stock image that matches the search term from Unsplash and saves it to the specified filename,
     enforcing the specified dimensions.
@@ -92,6 +92,7 @@ def download_stock_image(filename: str, output_folder: str = ".", search_term: s
                     with open(output_path, 'wb') as f:
                         f.write(image_response.content)
                     print(f"Image downloaded and saved to {output_path}")
+                    return True
                 else:
                     raise Exception(f"Failed to download image from URL: {image_url}")
             else:
@@ -99,7 +100,69 @@ def download_stock_image(filename: str, output_folder: str = ".", search_term: s
         else:
             raise Exception(f"Unsplash API request failed: {response.status_code} - {response.text}")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"An error occurred while fetching image: {e}")
+        
+        
+        
+import os
+import requests
+from pathlib import Path
+
+def download_stock_image_pexels(filename: str, output_folder: str = ".", search_term: str = "", orientation: str = "landscape") -> None:
+    """
+    Downloads the first stock image that matches the search term from Pexels and saves it to the specified filename,
+    enforcing the specified dimensions.
+
+    Parameters:
+        filename (str): The name of the file to save the image as.
+        output_folder (str): The directory to save the image in. Defaults to the current directory.
+        search_term (str): The search term to query images. Defaults to an empty string.
+        orientation (str): Desired photo orientation. Options: landscape, portrait, square. Defaults to 'landscape'.
+    """
+    PEXELS_API_KEY = os.getenv("PEXELS_API_KEY")
+    if not PEXELS_API_KEY:
+        raise Exception("Pexels API Key is not set. Please set it as an environment variable.")
+
+    url = "https://api.pexels.com/v1/search"
+    headers = {
+        'Authorization': PEXELS_API_KEY
+    }
+    params = {
+        'query': search_term,
+        'per_page': 1,  # Only fetch one image to simplify the process
+        'orientation': orientation
+    }
+
+    try:
+        # Make the API request to fetch the image
+        response = requests.get(url, headers=headers, params=params)
+        if response.status_code == 200:
+            data = response.json()
+            photos = data.get('photos', [])
+            
+            if photos:
+                # Get the first image's URL (original quality)
+                image_url = photos[0]['src']['original']
+
+                # Download the image
+                image_response = requests.get(image_url)
+                if image_response.status_code == 200:
+                    # Save the image to the specified file
+                    output_path = Path(output_folder) / filename
+                    output_path.parent.mkdir(parents=True, exist_ok=True)
+                    with open(output_path, 'wb') as f:
+                        f.write(image_response.content)
+                    print(f"Image downloaded and saved to {output_path}")
+                    return True
+                else:
+                    raise Exception(f"Failed to download image from URL: {image_url}")
+            else:
+                raise Exception("No images found for the given search term.")
+        else:
+            raise Exception(f"Pexels API request failed: {response.status_code} - {response.text}")
+    except Exception as e:
+        print(f"An error occurred while fetching image: {e}")
+        
 
 def download_gif(filename: str, output_folder: str = ".", url: str = None) -> None:
     """
@@ -114,3 +177,5 @@ def download_gif(filename: str, output_folder: str = ".", url: str = None) -> No
     output_path = Path(output_folder) / filename
     with open(output_path, 'wb') as f:
         f.write(gif_response.content)
+
+

@@ -3,6 +3,13 @@ import base64
 from pathlib import Path
 import logging
 from elevenlabs import ElevenLabs
+# Note: there is a bug in elevenlabs where you might get an error due to their pathnames being too long.
+# If this occurs, do this (on windows):
+# 1. Windows Key + R
+# 2. Search for 'regedit'
+# 3. Go to Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem
+# 4. Change variable LongPathsEnabled from 0 to 1
+# 5. Run again
 
 def generate_voiceover(voiceover_text: str, output_folder: str, filename_base: str = "voiceover",
                        max_sentence_length: int = 100, max_seconds_length: float = 5.0):
@@ -16,7 +23,7 @@ def generate_voiceover(voiceover_text: str, output_folder: str, filename_base: s
     """
     try:
         # Initialize the ElevenLabs client
-        client = ElevenLabs(api_key=os.environ['ELEVENLABS_API_KEY'])
+        client = ElevenLabs(api_key=os.environ['ELEVENLABS_API_KEY'], timeout=400)
         
         # Generate TTS with timing
         response = client.text_to_speech.convert_with_timestamps(
@@ -39,12 +46,12 @@ def generate_voiceover(voiceover_text: str, output_folder: str, filename_base: s
             f.write(base64.b64decode(audio_base64))
         logging.info(f"Audio file saved to {audio_path}")
         
-        srt_content = generate_srt_content(characters, character_start_times, max_sentence_length, max_seconds_length)
+        srt_content, voiceover_duration = generate_srt_content(characters, character_start_times, max_sentence_length, max_seconds_length)
         with open(subtitle_path, 'w', encoding='utf-8') as f:
             f.write(srt_content)
         logging.info(f"SRT file saved to {subtitle_path}")
         
-        return audio_path, subtitle_path
+        return audio_path, subtitle_path, voiceover_duration
     
     except Exception as e:
         logging.error(f"An error occurred while generating the voiceover: {e}")
@@ -84,12 +91,13 @@ def generate_srt_content(chars, start_times, max_sentence_length, max_seconds_le
             subtitle_end_time = min(end_time + 0.2, start_times[-1])
             
             # Add the subtitle entry
-            srt_entries.append(
-                f"{srt_index}\n"
-                f"{format_time(current_start_time)} --> {format_time(subtitle_end_time)}\n"
-                f"{current_text.strip()}\n"
-            )
-            srt_index += 1
+            if current_text.strip():
+                srt_entries.append(
+                    f"{srt_index}\n"
+                    f"{format_time(current_start_time)} --> {format_time(subtitle_end_time)}\n"
+                    f"{current_text.strip()}\n"
+                )
+                srt_index += 1
 
             # Reset for the next subtitle
             current_text = ""
@@ -102,8 +110,11 @@ def generate_srt_content(chars, start_times, max_sentence_length, max_seconds_le
             f"{format_time(current_start_time)} --> {format_time(start_times[-1] + 0.2)}\n"
             f"{current_text.strip()}\n"
         )
+        
+    # Get the total duration of the voiceover
+    voiceover_duration = start_times[-1] - start_times[0]
 
-    return "\n".join(srt_entries)
+    return "\n".join(srt_entries), voiceover_duration
 
 def format_time(seconds):
     """Format time in SRT format (HH:MM:SS,ms)."""
