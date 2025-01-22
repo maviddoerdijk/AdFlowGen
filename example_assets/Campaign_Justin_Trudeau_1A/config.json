@@ -1,0 +1,280 @@
+{
+    "general": {
+        "max_duration_seconds": 95.777
+    },
+    "assets": [
+        {
+            "asset_type": "voiceover",
+            "filename": "voiceover.mp3"
+        },
+        {
+            "asset_type": "subtitle",
+            "filename": "voiceover.srt"
+        },
+        {
+            "generation_method": "from_stlib",
+            "filename": "intro.mp4",
+            "asset_type": "overlay_video"
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Margaret_Sinclair%2C_Pat_Nixon%2C_Justin_Trudeau_1972-04-14_%28cropped%29.jpg/220px-Margaret_Sinclair%2C_Pat_Nixon%2C_Justin_Trudeau_1972-04-14_%28cropped%29.jpg",
+            "filename": "Margaret_Sinclair,_Pat_Nixon,_Justin_Trudeau_1972-04-14_(cropped).jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Justint_Pierre_Elliott_Trudeau_%281%29.jpg/220px-Justint_Pierre_Elliott_Trudeau_%281%29.jpg",
+            "filename": "Justint_Pierre_Elliott_Trudeau_(1).jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Justint_Pierre_Elliott_Trudeau_%281%29.jpg/220px-Justint_Pierre_Elliott_Trudeau_%281%29.jpg",
+            "filename": "Justint_Pierre_Elliott_Trudeau_(1).jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/The_Prime_Minister_of_Canada%2C_Mr._Justin_Trudeau_being_honoured_by_Sardar_Gobind_Singh_Longowal%2C_President_of_Shiromani_Gurdwara_Prabandhak_Committee_%28SGPC%29%2C_during_his_visit_to_Golden_Temple%2C_in_Amritsar.jpg/220px-thumbnail.jpg",
+            "filename": "The_Prime_Minister_of_Canada,_Mr.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/G7_summit_at_Shimakan.jpg/220px-G7_summit_at_Shimakan.jpg",
+            "filename": "G7_summit_at_Shimakan.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Freedom_Convoy_2022_Ottawa_January_31-7.jpg/220px-Freedom_Convoy_2022_Ottawa_January_31-7.jpg",
+            "filename": "Freedom_Convoy_2022_Ottawa_January_31-7.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Women_Deliver_2019_Conference_Location_Announcement_%2834569966804%29.jpg/220px-Women_Deliver_2019_Conference_Location_Announcement_%2834569966804%29.jpg",
+            "filename": "Women_Deliver_2019_Conference_Location_Announcement_(34569966804).jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 1.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 2.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 3.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 4.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 5.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 6.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 7.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 8.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 9.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 10.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 11.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 12.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 13.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 14.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 15.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 16.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 17.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 18.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 19.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 20.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 21.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 22.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 23.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 24.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 25.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 26.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 27.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 28.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 29.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 30.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 31.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 32.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 33.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 34.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 35.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 36.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 37.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 38.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 39.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 40.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "generation_method": "from_stlib",
+            "filename": "bg_img_black_grid.jpg",
+            "asset_type": "background_photo",
+            "duration": 90.777
+        },
+        {
+            "generation_method": "from_stlib",
+            "filename": "thanks_for_watching.mp4",
+            "asset_type": "overlay_video"
+        }
+    ]
+}

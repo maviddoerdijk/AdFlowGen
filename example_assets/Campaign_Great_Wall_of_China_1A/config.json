@@ -1,0 +1,101 @@
+{
+    "general": {
+        "max_duration_seconds": 75.483
+    },
+    "assets": [
+        {
+            "asset_type": "voiceover",
+            "filename": "voiceover.mp3"
+        },
+        {
+            "asset_type": "subtitle",
+            "filename": "voiceover.srt"
+        },
+        {
+            "generation_method": "from_stlib",
+            "filename": "intro.mp4",
+            "asset_type": "overlay_video"
+        },
+        {
+            "filename": "Bing Image 1.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 2.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 3.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 4.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 5.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 6.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 7.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 8.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 9.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 10.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 11.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 12.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 13.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "filename": "Bing Image 14.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 5
+        },
+        {
+            "generation_method": "from_stlib",
+            "filename": "bg_img_black_grid.jpg",
+            "asset_type": "background_photo",
+            "duration": 70.483
+        },
+        {
+            "generation_method": "from_stlib",
+            "filename": "thanks_for_watching.mp4",
+            "asset_type": "overlay_video"
+        }
+    ]
+}

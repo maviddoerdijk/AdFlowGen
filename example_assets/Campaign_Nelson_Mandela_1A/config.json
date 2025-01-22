@@ -1,0 +1,294 @@
+{
+    "general": {
+        "max_duration_seconds": 385.795
+    },
+    "assets": [
+        {
+            "asset_type": "voiceover",
+            "filename": "voiceover.mp3"
+        },
+        {
+            "asset_type": "subtitle",
+            "filename": "voiceover.srt"
+        },
+        {
+            "generation_method": "from_stlib",
+            "filename": "intro.mp4",
+            "asset_type": "overlay_video"
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/220px-Nelson_Mandela_1994.jpg",
+            "filename": "Nelson_Mandela_1994.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Young_Mandela.jpg/170px-Young_Mandela.jpg",
+            "filename": "Young_Mandela.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/220px-Nelson_Mandela_1994.jpg",
+            "filename": "Nelson_Mandela_1994.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Flag_of_the_African_National_Congress.svg/220px-Flag_of_the_African_National_Congress.svg.png",
+            "filename": "Flag_of_the_African_National_Congress.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/The_Nelson_Mandela_House.jpg/220px-The_Nelson_Mandela_House.jpg",
+            "filename": "The_Nelson_Mandela_House.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Frederik_de_Klerk_with_Nelson_Mandela_-_World_Economic_Forum_Annual_Meeting_Davos_1992.jpg/220px-Frederik_de_Klerk_with_Nelson_Mandela_-_World_Economic_Forum_Annual_Meeting_Davos_1992.jpg",
+            "filename": "Frederik_de_Klerk_with_Nelson_Mandela_-_World_Economic_Forum_Annual_Meeting_Davos_1992.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mandela_Bust_at_Southbank.jpg/220px-Mandela_Bust_at_Southbank.jpg",
+            "filename": "Mandela_Bust_at_Southbank.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/RobbenIslandSteinbruchA.JPG/220px-RobbenIslandSteinbruchA.JPG",
+            "filename": "RobbenIslandSteinbruchA.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "generation_method": "from_url",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Nelson_Mandela_tributes_in_Parliament_Square_-_London_-_DSCF0404.jpg/220px-Nelson_Mandela_tributes_in_Parliament_Square_-_London_-_DSCF0404.jpg",
+            "filename": "Nelson_Mandela_tributes_in_Parliament_Square_-_London_-_DSCF0404.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 1.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 2.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 3.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 4.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 5.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 6.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 7.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 8.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 9.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 10.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 11.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 12.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 13.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 14.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 15.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 16.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 17.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 18.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 19.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 20.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 21.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 22.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 23.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 24.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 25.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 26.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 27.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 28.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 29.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 30.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 31.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 32.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 33.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 34.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 35.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 36.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 37.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 38.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 39.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "filename": "Bing Image 40.jpg",
+            "asset_type": "overlay_photo",
+            "duration": 7.4759
+        },
+        {
+            "generation_method": "from_stlib",
+            "filename": "bg_img_black_grid.jpg",
+            "asset_type": "background_photo",
+            "duration": 380.795
+        },
+        {
+            "generation_method": "from_stlib",
+            "filename": "thanks_for_watching.mp4",
+            "asset_type": "overlay_video"
+        }
+    ]
+}
