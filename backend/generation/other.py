@@ -1,4 +1,3 @@
-# ... TODO: implement with https://screenshotlayer.com/
 # download_website_screenshot(website_url=website_url, output_folder=asset_path, filename=filename)
 # SCREENSHOT_LAYER_API_KEY
 # http://api.screenshotlayer.com/api/capture

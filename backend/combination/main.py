@@ -14,7 +14,7 @@ from moviepy.video.tools.subtitles import SubtitlesClip
 from typing import List, Dict, Any
 import logging
 
-def combine_assets(asset_folder: str, output_filename: str = "output_video.mp4", preview=False) -> str:
+def combine_assets(asset_folder: str, output_filename: str = "output_video.mp4", target_script='latin', preview=False) -> str:
     """
     Combines assets from the specified folder into a single video ad creative.
 
@@ -52,6 +52,11 @@ def combine_assets(asset_folder: str, output_filename: str = "output_video.mp4",
     wanted_height = 1080
     wanted_ratio = wanted_width / wanted_height
     wanted_fps = 24
+    fontfilepath = {
+        'latin': 'assets/stlib/fonts/FreeMonoBold.ttf',
+        'ethiopian': 'assets/stlib/fonts/NotoSansEthiopic.ttf'
+        # TODO: For improvements, add scripts for more languages
+    }.get(target_script, 'assets/stlib/fonts/FreeMonoBold.ttf')
 
     # Process each asset based on its type
     for config in asset_configs:
@@ -156,10 +161,10 @@ def combine_assets(asset_folder: str, output_filename: str = "output_video.mp4",
                 # TODO: Implement a more advanced subtitle generator 
                 # with white text with a black border, such as in fireship videos
                 # much larger text
-                subtitle_generator = lambda text: TextClip(font='C:\\Windows\\Fonts\\arial.ttf', text=text,
+                subtitle_generator = lambda text: TextClip(font=fontfilepath, text=text,
                                 font_size=72, color='white', method='caption', size=(int(wanted_width*3/4), None), stroke_color='black', stroke_width=2)
 
-                subtitles = SubtitlesClip(str(asset_file), make_textclip=subtitle_generator)
+                subtitles = SubtitlesClip(str(asset_file), make_textclip=subtitle_generator, encoding='utf-8')
                 subtitle_clips.append(subtitles.with_position(("center", "bottom")))
             else:
                 logging.warning(f"Unsupported subtitle format in file '{filename}'. Skipping.")
@@ -208,7 +213,8 @@ def combine_assets(asset_folder: str, output_filename: str = "output_video.mp4",
     
     # Set the final video duration
     if max_duration_seconds:
-        final_with_subtitles = final_with_subtitles.with_duration(max_duration_seconds)
+        if final_with_subtitles.duration > max_duration_seconds:
+            final_with_subtitles = final_with_subtitles.with_duration(max_duration_seconds)
         
     if preview:
         preview_clip = final_with_subtitles.resized(height=600)  # Adjust height to fit your screen

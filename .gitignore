@@ -1,6 +1,8 @@
 ### Custom Ignores for this codebase ###
 assets/Campaign_*/**
 assets/
+backend/workflow_handler
+example_assets/**/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

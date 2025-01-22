@@ -1,3 +1,8 @@
+"""
+Note: This code has been used to generate video's (see https://www.youtube.com/watch?v=rDvqZjSEq1Y&),
+however, it is not currently used in the EasyWiki application.
+"""
+
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm

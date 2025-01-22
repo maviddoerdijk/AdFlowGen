@@ -57,7 +57,6 @@ def generate_voiceover(voiceover_text: str, output_folder: str, filename_base: s
         logging.error(f"An error occurred while generating the voiceover: {e}")
         raise
 
-# Generate SRT file
 def generate_srt_content(chars, start_times, max_sentence_length, max_seconds_length):
     """
     Generate SRT content using character timing, max sentence length, and max seconds length.
@@ -90,6 +89,13 @@ def generate_srt_content(chars, start_times, max_sentence_length, max_seconds_le
             # Adjust timing slightly for natural breaks
             subtitle_end_time = min(end_time + 0.2, start_times[-1])
             
+            # Ensure we do not cut words in half
+            if len(current_text.strip()) > max_sentence_length:
+                last_space_index = current_text[:max_sentence_length].rfind(' ')
+                if last_space_index != -1:
+                    end_time = start_times[i - (len(current_text) - last_space_index - 1)]
+                    current_text = current_text[:last_space_index + 1]
+            
             # Add the subtitle entry
             if current_text.strip():
                 srt_entries.append(
@@ -115,6 +121,7 @@ def generate_srt_content(chars, start_times, max_sentence_length, max_seconds_le
     voiceover_duration = start_times[-1] - start_times[0]
 
     return "\n".join(srt_entries), voiceover_duration
+
 
 def format_time(seconds):
     """Format time in SRT format (HH:MM:SS,ms)."""

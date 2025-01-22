@@ -5,6 +5,7 @@ import os
 import traceback
 from pytubefix import YouTube
 from pytubefix.cli import on_progress
+from bing_image_downloader import downloader
             
 def download_stock_video(filename: str, output_folder: str = ".", search_term: str = "") -> None:
     """
@@ -102,11 +103,28 @@ def download_stock_image_unsplash(filename: str, output_folder: str = ".", searc
     except Exception as e:
         print(f"An error occurred while fetching image: {e}")
         
+def download_images_bing(output_folder: str = ".", search_term: str = "", limit: int = 10) -> None:
+    """
+    Downloads images that match the search term from Bing and saves them to the specified filename,
+    enforcing the specified dimensions.
+
+    Parameters:
+        filename (str): The name of the file to save the images as.
+        output_folder (str): The directory to save the images in. Defaults to the current directory.
+        search_term (str): The search term to query images. Defaults to an empty string.
+        limit (int): The number of images to download. Defaults to 10.
+    """
+    # Output folder will be in output_folder/{search_term}
+    output_path = Path(output_folder) / "bing_images" # the download() func will automatically save to output_path/{search_term}
+    output_path.mkdir(parents=True, exist_ok=True)
+
+    downloader.download(search_term, limit=limit, output_dir=str(output_path), adult_filter_off=True, force_replace=False, timeout=60, verbose=True)
+    output_path_saved = Path(output_path) / search_term
+    
+    filepaths = list(output_path_saved.glob("*.*"))
+    return filepaths
         
-        
-import os
-import requests
-from pathlib import Path
+
 
 def download_stock_image_pexels(filename: str, output_folder: str = ".", search_term: str = "", orientation: str = "landscape") -> None:
     """
